@@ -1,41 +1,118 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
+/* /////////////// */
 /* General Styling */
+/* /////////////// */
 
 * {
-	box-sizing: border-box;
+	/* box-sizing: border-box; */
 	padding: 0;
 	margin: 0;
 	font-size: 16px;
 }
 
 body {
+	font-family: roboto, sans-serif;
+
 	display: grid;
-	grid-template-columns: 15% 85%;
-	grid-template-rows: 20% 80%;
+	grid-template: 20% 80% / minmax(200px, 15%) minmax(auto, 85%);
 	grid-template-areas:
 		"sidebar header"
 		"sidebar main";
 	height: 100vh;
 }
 
+/* /////////////// */
 /* Sidebar Styling */
+/* /////////////// */
 
 div.sidebar {
-	grid-area: sidebar;
 	background-color: #60a5fa;
+	z-index: 3;
+	grid-area: sidebar;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 2fr repeat(11, 1fr) 8fr;
+	gap: 10px;
+	padding-left: 25px;
+	color: white;
 }
 
+.nav-row-container {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: 10px;
+	font-weight: 500;
+}
+
+/* Used Nth Selector instead of adding empty div */
+.nav-row-container:nth-child(7) {
+	grid-row: 7 / 9;
+	align-self: flex-start;
+	padding-top: 4px;
+}
+
+.icon {
+	background-color: white;
+	height: 10px;
+	aspect-ratio: 1/1;
+}
+
+.nav-option {
+	margin: 0;
+}
+
+#dashboard-heading {
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+
+#company-icon {
+	height: 20px;
+	aspect-ratio: 1/1;
+}
+/* ////// */
 /* Header */
+/* ////// */
 
 header {
-	grid-area: header;
 	background-color: white;
+	z-index: 2;
+	box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.5);
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 40% 60%;
+	grid-area: header;
 }
 
+/* searchbar container */
+
+.searchbar-container {
+}
+
+.searchicon
+
+/* userinfo-container */
+
+.searchicon {
+}
+
+#site-search {
+}
+
+/* buttons-container */
+
+.buttons-container {
+}
+
+/* ///// */
 /* Main  */
+/* ///// */
 
 main {
-	grid-area: main;
 	background-color: #e2e8f0;
+	z-index: 1;
+
+	grid-area: main;
 }
