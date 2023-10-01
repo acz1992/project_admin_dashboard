@@ -215,4 +215,51 @@ main {
 	z-index: 1;
 
 	grid-area: main;
+
+	display: grid;
+	grid-template-columns: auto 320px;
+}
+
+.your-projects {
+	display: grid;
+	grid-template-rows: min-content auto;
+	gap: 10px;
+}
+
+.your-projects > h3 {
+	font-weight: 800;
+	font-size: 22px;
+}
+
+.social-icons {
+	background-color: black;
+	height: 25px;
+	aspect-ratio: 1/1;
+	align-self: center;
+}
+
+.projects-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 15px;
+}
+
+.project-cards {
+	display: grid;
+	grid-template-rows: 2fr 5fr 3fr;
+	background-color: white;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+	height: 100%;
+	padding: 10px 10px 0 10px;
+}
+
+.project-cards > h3 {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.bottom-cards {
+	display: grid;
+	grid-template-columns: 1fr auto auto auto;
+	gap: 10px;
 }
