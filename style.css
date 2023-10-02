@@ -40,19 +40,21 @@ div.sidebar {
 	background-color: #60a5fa;
 	z-index: 3;
 	grid-area: sidebar;
+	height: 100%;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 2fr repeat(11, 1fr) 8fr;
-	gap: 10px;
-	padding-left: 25px;
+	gap: 30px;
+	padding: 20px 40px 0 20px;
+
 	color: white;
 }
 
 .nav-row-container {
 	display: grid;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: min-content min-content;
 	align-items: center;
-	gap: 10px;
+	gap: 12px;
 	font-weight: 500;
 }
 
@@ -63,9 +65,13 @@ div.sidebar {
 	padding-top: 4px;
 }
 
+.icon,
+#company-icon {
+	fill: white;
+}
+
 .icon {
-	background-color: white;
-	height: 16px;
+	height: 26px;
 	aspect-ratio: 1/1;
 }
 
@@ -79,12 +85,16 @@ div.sidebar {
 }
 
 #company-icon {
-	height: 20px;
+	height: 40px;
 	aspect-ratio: 1/1;
 }
 
 p.nav-option {
 	font-size: 18px;
+}
+
+.black-icons {
+	fill: black;
 }
 
 /* ////// */
@@ -110,13 +120,12 @@ header {
 .searchbar-container {
 	display: grid;
 	grid-template-columns: min-content auto;
-	gap: 10px;
+	gap: 5px;
 	align-items: center;
 }
 
 #search-icon {
-	height: 24px;
-	background-color: black;
+	height: 30px;
 	aspect-ratio: 1/1;
 }
 
@@ -139,16 +148,13 @@ input[type="search"] {
 	justify-self: right;
 }
 
-#alerts-icon {
-	background-color: black;
-	height: 15px;
+#alert-icon {
 	aspect-ratio: 1/1;
 	justify-self: right;
-	height: 24px;
+	height: 36px;
 }
 
-#placeholder-pic1 {
-	background-color: rgb(236, 167, 8);
+#profile-pic-alerts {
 	border-radius: 50px;
 	height: 40px;
 	aspect-ratio: 1/1;
@@ -156,7 +162,7 @@ input[type="search"] {
 }
 
 #top-right-username {
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: 700;
 	justify-self: left;
 }
@@ -171,8 +177,7 @@ input[type="search"] {
 	gap: 15px;
 }
 
-#placeholder-pic1 {
-	background-color: rgb(236, 167, 8);
+#profile-pic-user {
 	grid-row: 1 span 2;
 	border-radius: 50px;
 	height: 60px;
@@ -254,7 +259,7 @@ div > h3 {
 }
 
 .social-icons {
-	background-color: black;
+	fill: black;
 	height: 25px;
 	aspect-ratio: 1/1;
 	align-self: center;
@@ -326,7 +331,6 @@ div > h3 {
 .user-pic {
 	height: 40px;
 	aspect-ratio: 1/1;
-	background-color: aquamarine;
 	border-radius: 50px;
 }
 

@@ -1,5 +1,7 @@
 Things still need to be done:
 
-Add symbols
+Add pseudo classes
+Media queries
 
-Make responsive
+Notes:
+Icons from Material Design Icons (https://pictogrammers.com/library/mdi/)
