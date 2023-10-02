@@ -1,6 +1,5 @@
 Things still need to be done:
 
-Add pseudo classes
 Media queries
 
 Notes:
